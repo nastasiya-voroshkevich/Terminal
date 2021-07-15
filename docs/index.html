@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+     <link rel="stylesheet" href=".//libs/jquery-ui-1.12.1.custom/jquery-ui.css">
+     <link rel="stylesheet" href="./libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+     <link rel="stylesheet" href="./libs/jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+     <link rel="stylesheet" href="./libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+     <link rel="stylesheet" href="./css/style.css"> 
+        <title>Terminal</title>
+    </head>
+    <body>
+     
+        <div class="wrapper">
+            <div id="error"></div>
+         <form  id="form_imt" name="myForm" >
+                <div class="widget">
+                <div class="wrapp">
+            <p id="my-widget1" class="description"> Пицца:</p>
+            <div>
+            <input list="pizza" class="input-diversity" name="piz" autocomplete="off"/><datalist id="pizza"></datalist>
+            
+        </div>
+        </div>
+        <div class="wrapp">
+            <p id="my-widget2" class="description"> Размер:</p>
+           <div>
+            <input list="size" name="siz" class="input-size" autocomplete="off" disabled><datalist id="size"></datalist>
+            </div>
+        </div>
+        <div class="wrapp">
+            <p id="my-widget3" class="description"> Соусы:</p>
+            <div>
+            <input list="sauces" name="sauc" class="input-sauces" autocomplete="off" disabled><datalist id="sauces"></datalist>
+          
+        </div>
+      
+        </div>
+           </div>
+            <div class="btn-wrapp">
+                <input class="jqButton ui-button ui-corner-all ui-widget" type="submit" id="green" value="Заказать">
+                                            
+            </div>
+        
+        </form>
+        <div class="wrapp-img">
+       <img src="./img/a-63.jpg" alt="pizza">
+    </div>
+        <div id="modal" data-modal class="fade-block" hidden>
+            <div class="modal-window">
+            <div class="container" hidden>
+                <h3>Чек</h3>
+                <div id="result"></div>
+         <div class="wrapp-flex"><p>Пицца:<span id="str"></span>.</p></div> 
+         <div class="wrapp-flex"><p>Размер: <span id="text"></span> см.</p> </div>  
+         <div class="wrapp-flex"> <p>Соус:<span id="text-sauces"></span>.</p> </div> 
+        </div>
+        <button id="btn-modal" class="ui-button ui-corner-all ui-widget">
+            Вернуться назад
+        </button>  
+                                    
+        </div>
+        </div>
+        </div>
+    </div>
+       
+        <script src="./libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script> 
+        <script src="./libs/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+        <script src="./libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
