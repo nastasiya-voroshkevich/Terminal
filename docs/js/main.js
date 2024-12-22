@@ -10,7 +10,16 @@ let container = document.querySelector(".container");
 const modal = document.getElementById("modal");
 let error = document.getElementById("error");
 const buttonClose = document.querySelector("#btn-modal");
+let pizzaSize = ["45", "31", "26", "21"];
 
+let pizzaArray = ["Пепперони", "Деревенская ", "Гавайская", "Грибная"];
+let pizzaSauces = ["сырный", "кисло-сладкий", "чесночный", "барбекю"];
+const pizzaSizeWithPrice = {
+  '45': 8,
+  '31': 6,
+  '26': 5,
+  '21': 4,
+}
 widget.addEventListener("input", (event) => {
   if (
     piz.value === "Пепперони" ||
@@ -96,10 +105,7 @@ button.addEventListener("click", function () {
   });
 });
 
-let pizzaSize = ["45", "31", "26", "21"];
 
-let pizzaArray = ["Пепперони", "Деревенская ", "Гавайская", "Грибная"];
-let pizzaSauces = ["сырный", "кисло-сладкий", "чесночный", "барбекю"];
 
 $.each(pizzaArray, function (i) {
   $("<option value=" + pizzaArray[i] + ">").appendTo("#pizza");
